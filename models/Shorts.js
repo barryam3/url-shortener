@@ -1,8 +1,8 @@
 let data = [];
 
 class Shorts {
-  static addOne(name, url, author = null) {
-    const short = { name, url, author };
+  static addOne(name, url, creator = null) {
+    const short = { name, url, creator };
     data.push(short);
     return short;
   }
