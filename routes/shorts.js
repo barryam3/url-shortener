@@ -37,19 +37,17 @@ router.get('/', (req, res) => {
  * Update a short.
  * @name PUT/api/shorts/:name
  * :name is the name of the short
- * @param {string} [name] - the new short name
- * @param {string} [url] - the new URL to point to
+ * @param {string} url - the new URL to point to
  * @return {Short} - the updated short
  * @throws {404} - if short does not exist
  */
 router.put('/:name', (req, res) => {
-  let short = Shorts.findOne(req.params.name);
-  if (short === undefined) {
+  if (Shorts.findOne(req.params.name) === undefined) {
     res.status(404).json({
       error: `Short URL ${req.params.name} does not exist.`,
     }).end();
   } else {
-    short = Shorts.updateOne(req.params.name, req.body);
+    const short = Shorts.updateOne(req.params.name, req.body.url);
     res.status(200).json(short).end();
   }
 });
@@ -62,13 +60,12 @@ router.put('/:name', (req, res) => {
  * @throws {404} - if short does not exist
  */
 router.delete('/:name', (req, res) => {
-  let short = Shorts.findOne(req.params.name);
-  if (short === undefined) {
+  if (Shorts.findOne(req.params.name) === undefined) {
     res.status(404).json({
       error: `Short URL ${req.params.name} does not exist.`,
     }).end();
   } else {
-    short = Shorts.deleteOne(req.params.name);
+    const short = Shorts.deleteOne(req.params.name);
     res.status(200).json(short).end();
   }
 });
