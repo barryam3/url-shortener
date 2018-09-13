@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Fritter</title>
+  <title>URL Shortener</title>
   <meta name="author" content="6.170 Staff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/stylesheets/style.css">
@@ -11,121 +11,60 @@
 
 <body>
   <header>
-    <h1>Fritter</h1>
+    <h1>URL Shortener</h1>
   </header>
 
   <main class="two-col">
     <section id="operations-container">
       <h2>Operations:</h2>
       <div class="scrollbox">
-        <form id="create-user">
-          <h3>Create User</h3>
-          <div>
-            <label for="username">Username:</label>
-            <input id="username" name="username">
-          </div>
-          <div>
-            <label for="password">Password:</label>
-            <input id="password" name="password">
-          </div>
-          <input type="submit" value="Create User">
-        </form>
 
-        <form id="delete-user">
-          <h3>Delete User</h3>
-          <input type="submit" value="Delete User">
-        </form>
-
-        <form id="change-password">
-          <h3>Change Password</h3>
+        <form id="add-one">
+          <h3>Create Short URL</h3>
           <div>
-            <label for="password">New Password:</label>
-            <input id="password" name="password">
-          </div>
-          <input type="submit" value="Change Password">
-        </form>
-
-        <form id="sign-in">
-          <h3>Sign In</h3>
-          <div>
-            <label for="username">Username:</label>
-            <input id="username" name="username">
+            <label for="name">Short Name:</label>
+            <input id="name" name="name">
           </div>
           <div>
-            <label for="password">Password:</label>
-            <input id="password" name="password">
+            <label for="url">URL:</label>
+            <input id="url" name="url">
           </div>
-          <input type="submit" value="Sign In">
-        </form>
-
-        <form id="sign-out">
-          <h3>Sign Out</h3>
-          <input type="submit" value="Sign out">
-        </form>
-
-        <form id="view-all-freets">
-            <h3>View All Freets</h3>
-            <input type="submit" value="View All Freets">
-          </form>
-
-        <form id="view-freets-by-author">
-          <h3>View Freets By Author</h3>
-          <div>
-            <label for="author">Author:</label>
-            <input id="author" name="author">
-          </div>
-          <input type="submit" value="View Freets By Author">
-        </form>
-
-        <form id="create-freet">
-          <h3>Create Freet</h3>
-          <div>
-            <label for="content">Content:</label>
-            <textarea id="content" name="content"></textarea>
-          </div>
-          <input type="submit" value="Create Freet">
-        </form>
-
-        <form id="edit-freet">
-          <h3>Edit Freet</h3>
-          <div>
-            <label for="id">ID:</label>
-            <input id="id" name="id">
-          </div>
-          <div>
-            <label for="content">Content:</label>
-            <textarea id="content" name="content"></textarea>
-          </div>
-          <input type="submit" value="Edit Freet">
-        </form>
-
-        <form id="upvote-freet">
-          <h3>Upvote Freet</h3>
-          <div>
-            <label for="id">ID:</label>
-            <input id="id" name="id">
-          </div>
-          <input type="submit" value="Upvote Freet">
-        </form>
-
-        <form id="downvote-freet">
-          <h3>Downvote Freet</h3>
-          <div>
-            <label for="id">ID:</label>
-            <input id="id" name="id">
-          </div>
-          <input type="submit" value="Downvote Freet">
+          <input type="submit" value="Shorten URL">
         </form>
 
 
-        <form id="delete-freet">
-          <h3>Delete Freet</h3>
-          <div>
-            <label for="id">ID:</label>
-            <input id="id" name="id">
-          </div>
-          <input type="submit" value="Delete Freet">
+        <form id="list-all">
+          <h3>List All Short URLs</h3>
+          <input type="submit" value="List Short URLs">
         </form>
+
+
+        <form id="update-one">
+          <h3>Update Short URL</h3>
+          <div>
+              <label for="name-old">Old Short Name:</label>
+              <input id="name-old" name="name-old">
+            </div>
+          <div>
+            <label for="name-new">New Short Name (Optional):</label>
+            <input id="name-new" name="name-new">
+          </div>
+          <div>
+            <label for="url">New URL (Optional):</label>
+            <input id="url" name="url">
+          </div>
+          <input type="submit" value="Update Short URL">
+        </form>
+
+        <form id="delete-one">
+          <h3>Delete Short URL</h3>
+          <div>
+            <label for="name">Short Name:</label>
+            <input id="name" name="name">
+          </div>
+          <input type="submit" value="Delete Short URL">
+        </form>
+
       </div>
     </section>
     <section>

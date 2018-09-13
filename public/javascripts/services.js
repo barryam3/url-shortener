@@ -38,51 +38,19 @@ function showResponse(axiosResponse) {
  * See https://github.com/axios/axios for more info
  */
 
-function createUser(fields) {
+function addOne(fields) {
   showObject(fields);
 }
 
-function changePassword(fields) {
+function listAll(fields) {
   showObject(fields);
 }
 
-function deleteUser(fields) {
+function updateOne(fields) {
   showObject(fields);
 }
 
-function signIn(fields) {
-  showObject(fields);
-}
-
-function signOut(fields) {
-  showObject(fields);
-}
-
-function viewAllFreets(fields) {
-  showObject(fields);
-}
-
-function viewFreetsByAuthor(fields) {
-  showObject(fields);
-}
-
-function createFreet(fields) {
-  showObject(fields);
-}
-
-function editFreet(fields) {
-  showObject(fields);
-}
-
-function upvoteFreet(fields) {
-  showObject(fields);
-}
-
-function downvoteFreet(fields) {
-  showObject(fields);
-}
-
-function deleteFreet(fields) {
+function deleteOne(fields) {
   showObject(fields);
 }
 
@@ -90,18 +58,10 @@ function deleteFreet(fields) {
 
 // map form (by id) to the function that should be called on submit
 const formsAndHandlers = {
-  'create-user': createUser,
-  'delete-user': deleteUser,
-  'change-password': changePassword,
-  'sign-in': signIn,
-  'sign-out': signOut,
-  'view-all-freets': viewAllFreets,
-  'view-freets-by-author': viewFreetsByAuthor,
-  'create-freet': createFreet,
-  'edit-freet': editFreet,
-  'upvote-freet': upvoteFreet,
-  'downvote-freet': downvoteFreet,
-  'delete-freet': deleteFreet,
+  'add-one': addOne,
+  'list-all': listAll,
+  'update-one': updateOne,
+  'delete-one': deleteOne,
 };
 
 // attach handlers to forms
