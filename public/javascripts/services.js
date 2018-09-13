@@ -39,7 +39,9 @@ function showResponse(axiosResponse) {
  */
 
 function addOne(fields) {
-  showObject(fields);
+  axios.post('/api/shorts', fields)
+    .then(showResponse)
+    .catch(showResponse);
 }
 
 function listAll(fields) {
@@ -54,6 +56,12 @@ function deleteOne(fields) {
   showObject(fields);
 }
 
+function signIn(fields) {
+  axios.post('/api/users/signin', fields)
+    .then(showResponse)
+    .catch(showResponse);
+}
+
 // IT IS UNLIKELY THAT YOU WILL WANT TO EDIT THE CODE BELOW
 
 // map form (by id) to the function that should be called on submit
@@ -62,6 +70,7 @@ const formsAndHandlers = {
   'list-all': listAll,
   'update-one': updateOne,
   'delete-one': deleteOne,
+  'sign-in': signIn,
 };
 
 // attach handlers to forms
