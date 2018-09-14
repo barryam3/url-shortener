@@ -1,5 +1,6 @@
 {
-  "name": "fritter-starter",
+  "name": "url-shortener",
+  "author": "Barry McNamara",
   "version": "0.0.0",
   "private": true,
   "scripts": {
