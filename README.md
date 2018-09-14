@@ -5,3 +5,5 @@ A simple URL shortener. This is the main example for 6.170 Recitation 3 on Node 
 
 ## Notes
 This app skeleton was created using [Express Generator](https://expressjs.com/en/starter/generator.html).
+
+Credit to [Harihar Subramanyam](https://github.com/hariharsubramanyam) for the idea.
