@@ -16,7 +16,7 @@ const router = express.Router();
 router.post('/', (req, res) => {
   if (Shorts.findOne(req.body.name) !== undefined) {
     res.status(400).json({
-      error: `Short URL ${req.params.name} already exists.`,
+      error: `Short URL ${req.body.name} already exists.`,
     }).end();
   } else {
     const short = Shorts.addOne(req.body.name, req.body.url);
