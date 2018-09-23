@@ -19,6 +19,7 @@ class Shorts {
    * @param {string} name - Short name
    * @param {string} url - Short url
    * @param {string} creator - Short creator
+   * @return {Short} - created short
    */
   static addOne(name, url, creator = null) {
     const short = { name, url, creator };
